@@ -68,7 +68,7 @@ public class TblCandidate implements java.io.Serializable {
 		this.candidateId = candidateId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "tbl_user_user_id")
 	public TblUser getTblUser() {
 		return this.tblUser;
@@ -78,7 +78,7 @@ public class TblCandidate implements java.io.Serializable {
 		this.tblUser = tblUser;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "tbl_job_job_id", nullable = false)
 	public TblJob getTblJob() {
 		return this.tblJob;
